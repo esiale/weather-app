@@ -1,12 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Weather App</title>
-</head>
-<body>
-  <script src="main.js"></script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <title>Weather App</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="weather-large">
+        <div class="city"></div>
+        <div class="search">
+          <input type="text" id="search" />
+          <span class="material-icons-outlined"> search </span>
+        </div>
+        <div class="details">
+          <div class="icon"></div>
+          <div class="temp"></div>
+          <div class="description"></div>
+          <div class="feels-like">
+            <div class="feels-like-title">Feels like</div>
+          </div>
+          <div class="pressure">
+            <div class="pressure-title">Pressure</div>
+          </div>
+          <div class="humidity">
+            <div class="humidity-title">Humidity</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="main.js"></script>
+  </body>
 </html>
