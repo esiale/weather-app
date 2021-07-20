@@ -1,0 +1,102 @@
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+}
+
+.weather-large {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+    'city search'
+    'details details';
+  width: 70%;
+  font-family: 'Rajdhani', sans-serif;
+}
+
+.weather-large .city {
+  grid-area: city;
+}
+
+.weather-large .search {
+  grid-area: search;
+}
+
+.weather-large .search input {
+  border: 0;
+}
+
+.weather-large .details {
+  grid-area: details;
+  display: grid;
+  grid-template-columns: 1fr 1.25fr 0.75fr 0.75fr 0.75fr;
+  grid-template-rows: repeat(2 1fr);
+  grid-template-areas:
+    'description description description description description'
+    'icon temp feels-like pressure humidity';
+  font-size: 2vw;
+}
+
+.weather-large .details * {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.weather-large .icon {
+  grid-area: icon;
+}
+
+.weather-large .icon img {
+  width: 100%;
+  height: 100%;
+}
+
+.weather-large .temp {
+  grid-area: temp;
+  font-size: 7.5vw;
+}
+
+.weather-large .description {
+  text-transform: capitalize;
+  grid-area: description;
+  font-size: 3vw;
+  display: flex;
+  justify-content: left;
+}
+
+/* .weather-large .feels-like-title {
+  grid-area: feels-like-title;
+  display: flex;
+  align-items: flex-end;
+} */
+
+.weather-large .feels-like {
+  grid-area: feels-like;
+  display: flex;
+  flex-direction: column;
+}
+
+/* .weather-large .pressure-title {
+  grid-area: pressure-title;
+  display: flex;
+  align-items: flex-end;
+} */
+
+.weather-large .pressure {
+  grid-area: pressure;
+  display: flex;
+  flex-direction: column;
+}
+
+/* .weather-large .humidity-title {
+  grid-area: humidity-title;
+  display: flex;
+  align-items: flex-end;
+} */
+
+.weather-large .humidity {
+  grid-area: humidity;
+  display: flex;
+  flex-direction: column;
+}

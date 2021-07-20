@@ -1,0 +1,28 @@
+body {
+  background: linear-gradient(to bottom, #f3904f, #3b4371);
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+}
+
+@keyframes loading {
+  0% {
+    transform: rotate(0.5turn);
+  }
+  50% {
+    transform: rotate(0turn);
+  }
+  100% {
+    transform: rotate(0turn);
+  }
+}
+
+.loading-icon {
+  font-size: 50rem;
+  animation: loading 1.25s infinite ease-in-out;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+}
