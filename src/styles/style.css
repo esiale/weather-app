@@ -1,3 +1,14 @@
+:root {
+  --primary: hsla(232, 30%, 40%, 1);
+  --secondary: hsla(24, 87%, 55%, 1);
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+}
+
 body {
   background: linear-gradient(to bottom, #f3904f, #3b4371);
   width: 100vw;
@@ -5,24 +16,116 @@ body {
   margin: 0;
 }
 
-@keyframes loading {
-  0% {
-    transform: rotate(0.5turn);
-  }
-  50% {
-    transform: rotate(0turn);
-  }
-  100% {
-    transform: rotate(0turn);
-  }
-}
-
-.loading-icon {
-  font-size: 50rem;
-  animation: loading 1.25s infinite ease-in-out;
-}
-
 .wrapper {
+  width: 100%;
+  height: 100%;
   display: flex;
   justify-content: center;
+  align-items: center;
+}
+
+.weather-large {
+  display: grid;
+  align-items: center;
+  grid-template-columns: 0.7fr 1fr;
+  grid-template-areas:
+    'city search'
+    'details details';
+  width: 70%;
+  font-family: 'Rajdhani', sans-serif;
+}
+
+.weather-large .city {
+  grid-area: city;
+  font-size: 6vw;
+  margin-left: 0.4rem;
+  margin-top: 0.5rem;
+  font-weight: 600;
+}
+
+.weather-large .search {
+  grid-area: search;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60%;
+  background-color: var(--primary);
+  border-radius: 2rem;
+  padding: 0.5rem;
+  margin-top: 0.5rem;
+  margin-right: 0.3rem;
+}
+
+.weather-large .search input {
+  border: 0;
+  width: 100%;
+  background-color: transparent;
+  color: #fff;
+  font-family: 'Roboto', sans-serif;
+  font-size: 3vw;
+}
+
+.weather-large .search span {
+  font-size: 4vw;
+  color: var(--secondary);
+}
+
+.weather-large .details {
+  grid-area: details;
+  display: grid;
+  grid-template-columns: 1fr 1.25fr 0.75fr 0.75fr 0.75fr;
+  grid-template-rows: repeat(2 1fr);
+  grid-template-areas:
+    'description description description description description'
+    'icon temp feels-like pressure humidity';
+  font-size: 3vw;
+}
+
+.weather-large .details * {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.weather-large .icon {
+  grid-area: icon;
+}
+
+.weather-large .icon img {
+  width: 100%;
+  height: 100%;
+}
+
+.weather-large .temp {
+  grid-area: temp;
+  font-size: 8vw;
+  margin: 0 0.2rem;
+}
+
+.weather-large .description {
+  text-transform: capitalize;
+  grid-area: description;
+  font-size: 4vw;
+  display: flex;
+  justify-content: left;
+  margin-left: 0.5rem;
+  font-weight: 600;
+}
+
+.weather-large .feels-like {
+  grid-area: feels-like;
+  display: flex;
+  flex-direction: column;
+}
+
+.weather-large .pressure {
+  grid-area: pressure;
+  display: flex;
+  flex-direction: column;
+}
+
+.weather-large .humidity {
+  grid-area: humidity;
+  display: flex;
+  flex-direction: column;
 }
